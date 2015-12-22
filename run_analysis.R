@@ -5,7 +5,7 @@ if(!file.exists("dataset.zip")){
      download.file(uri,destfile = "dataset.zip")  
 }
 
-unzip("dataset.zip",files=NULL)
+unzip("dataset.zip",files=NULL,overwrite = T)
 
 # from training and test data merge datasets
 trainingtable<-read.table("UCI HAR Dataset/train/X_train.txt",header = F)
